@@ -1,0 +1,64 @@
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/templates"><button type="button"
+                class="btn nav-btn">Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  aa" aria-current="page" routerLink="/My Reports"><button type="button" class="btn nav-btn">My
+                Reports</button></a>
+          </li>
+          <li class="nav-item">
+            <a  href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';
+            document.getElementById('fade').style.display='block'" class="nav-link  aa" aria-current="page" routerLink="#"><button type="button"
+                class="btn nav-btn">FeedBack</button></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="#">Action</a></li>
+              <li><a class="dropdown-item" routerLink="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <!-- end of navbar -->
+
+  
+  <!-- feedback section -->
+  <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)">
+  <div id="light" class="white_content container col-4">
+    <div class="row">
+        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" class="col-1 exit"><i class="fas fa-times-circle"></i></a>
+    </div>
+
+        <h2 class="page-title">FeedBack Form</h2>
+        <label for="" class="label" > First Name </label>
+        <input class="inputs col-9" placeholder="Enter First Name" type="text"  name="name"  formControlName="name" >
+        <label for="" class="label"> Email</label>
+        <input class="inputs col-9" placeholder="Enter Your Email" type="text" name="email" formControlName="email" >
+        <label for="" class="label"> Message </label>
+        <textarea class="inputs comment-input col-9" type="text" placeholder="Your Comment"  name="content " formControlName="content" ></textarea>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      
+    </div>
+  <div id="fade" class="black_overlay"></div>
+  
+</form>

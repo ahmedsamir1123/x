@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-2 leftConrner">
+    <img src="../../assets/imgs/admin/WM 01.png" alt="" class="img-fluid">
+    <h3 class="text-center"> WriteMate</h3>
+  </div>
+
+  <div class="col-10 ">
+    <nav class="navbar navbar-expand-lg nav row ">
+
+
+      <div class="container-fluid ">
+
+
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-user-cog"></i>
+                <span class="navSpan"> {{name}} </span>
+              </a>
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" routerLink="/setting">Account Setting</a></li>
+
+                <li><a class="" onclick="document.getElementById('light').style.display='block';
+                document.getElementById('fade').style.display='block'" aria-current="page" routerLink="#"><button
+                      type="button" class="btn nav-btn">Add Clerk</button></a>
+                </li>
+                <li><button class="btn nav-btn" (click)="logout()">Logout</button></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <section class="accounts-list" style="margin-top: 50px;">
+      <div class="row">
+        <h4 class="col-2 text-center table-data" style="background-color: #A8AEB5;"> User Name </h4>
+        <h4 class="col-3 text-center table-data" style="background-color: #A8AEB5;"> Email </h4>
+        <h4 class="col-2 text-center table-data" style="background-color: #A8AEB5;"> Date Of Creation </h4>
+        <h4 class="col-2 text-center table-data" style="background-color: #A8AEB5;"> Status </h4>
+        <h4 class="col-3 text-center table-data" style="background-color: #D5AB9C;"> Action </h4>
+        
+      </div>
+
+      <div class="row" *ngFor="let x of allData" style="background-color: rgb(150, 181, 202);">
+
+        <h4 class="col-2 text-center table-data">{{x.name}} </h4>
+        <h4 class="col-3 text-center table-data"> {{x.email}}</h4>
+        <h6 class="col-2 text-center table-data"> {{x.crwated_date}}</h6>
+        <h4 class="col-2 text-center table-data"> {{x.account_STATUS}}</h4>
+        <h6 class="col-3 text-center table-data">
+         <button class="icons col-3"
+              style="border: none; background-color:rgb(150, 181, 202); " title="view" name="edit"  (click)="active(x.id)">
+              <i class="fas fa-check"></i>
+            </button>
+          <button (click)="ban(x.id)" name="bann" style="border: none; background-color:rgb(150, 181, 202);"
+            class="icons col-3" title="delete"><i class="fas fa-ban"></i></button>
+            <button (click)="remove(x.id)" name="delete" style="border: none; background-color:rgb(150, 181, 202);"
+            class="icons col-3" title="delete"><i class=" fas fa-trash-alt"></i></button>
+        </h6>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+<!-- add Clerk section -->
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)">
+  <div id="light" class="white_content container col-4">
+    <div class="row">
+      <a href="javascript:void(0)"
+        onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"
+        class="col-1 exit"><i class="fas fa-times-circle"></i></a>
+    </div>
+
+    <h2 class="page-title">Add Clerk</h2>
+    <label for="" class="label"> Username </label>
+    <input class="inputs col-9" placeholder="Enter Username" type="text" name="name" formControlName="name">
+    <label for="" class="label"> Email</label>
+    <input class="inputs col-9" placeholder="Enter Your Email" type="email" name="email" formControlName="email">
+    <label for="" type="password" class="label"> password </label>
+    <input class="inputs col-9" type="password" placeholder="password" name="password " formControlName="password">
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </div>
+  <div id="fade" class="black_overlay"></div>
+
+</form>
+

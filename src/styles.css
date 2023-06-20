@@ -1,0 +1,44 @@
+/* @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-icons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css'; */
+@import '../node_modules/font-awesome/css/font-awesome.css';
+.body-bg{
+    background-color: rgba(163, 142, 142, 0.589);
+    
+
+}
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+/*   
+  .container {  
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;    
+  }
+  
+  .quote {
+      color: #8cc540;
+      font-style: italic;
+  }
+  
+  .redText {
+      color: Red;
+      font-size: 12px;
+      font-family: Arial;
+  }
+  
+  h1.titleText {
+      color: #69a8cf;
+      text-align: left;
+      margin-top: 40px;
+      font-weight: normal;
+  } */

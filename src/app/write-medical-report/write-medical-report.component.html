@@ -1,0 +1,40 @@
+<form [formGroup]="angForm" (ngSubmit)="postReport(angForm)" autocomplete="off" method="post">
+  <div class="container" style="margin-top: 80px;">
+    <div class="card">
+      <angular-editor formControlName="description" [(ngModel)]="inputText" [config]="editorConfig"
+        (keyup.esc)="addWord()">
+        <ng-template #customButtons let-executeCommandFn="executeCommandFn">
+          <ae-toolbar-set>
+            <ae-button iconClass="far fa-save" title="Angular editor logo" (buttonClick)="saveToggle()">
+              <i class="far fa-save" (click)="saveToggle()"></i>
+            </ae-button>
+           
+
+          </ae-toolbar-set>
+         
+
+        </ng-template>
+      </angular-editor>
+    </div>
+  </div>
+
+
+
+  <!-- save-as.component.html -->
+  <div id="save-as-container" class="save-as-container">
+    <div class="save-as-modal">
+      <div class="save-as-modal-header">
+        <h3 class="save-as-modal-title">Save As</h3>
+      </div>
+      <div class="save-as-modal-body">
+        <label for="file-name">File Name:</label>
+        <input id="file-name" type="text" formControlName="title">
+        <button class="save-as-btn">Save</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<select id="word-select" [(ngModel)]="selectedWord" class="select" style="margin-top: -20px;">
+  <option *ngFor="let word of predictedText" [value]="word">{{ word }}</option>
+</select>

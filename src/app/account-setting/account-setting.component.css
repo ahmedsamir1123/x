@@ -1,0 +1,65 @@
+.logo{
+    width: 70px;
+   height: 60px;
+   margin-left: 20px;
+ }
+ .logo-text{
+  color: white;
+  font-size: 18px;
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 25px;
+ }
+
+ .fa-user-circle{
+    margin-left: 45%;
+    font-size: 100px;
+    margin-top: 30px;
+ }
+
+ .info{
+    margin-top: 60px;
+ }
+ .line{
+    width: 20%;
+    background-color: rgb(73, 83, 83);
+    height: 2px;
+ }
+
+ .input-info{
+    margin-top: 50px;
+    margin-left: 5%;
+ }
+ .input{
+    width: 260px;
+    border-radius: 15px;
+ }
+
+ .btn{
+    margin-left: 35%;
+    margin-top: 2%;
+    width: 100px;
+
+    border-radius: 20px;
+    background-color:black;
+    color: white;
+    box-shadow: 5px 2px 1.5px rgba(151, 150, 150, 0.678);
+}
+ 
+@media(max-width:950px){
+    .fa-user-circle{
+        margin-left: 40%;
+        font-size: 100px;
+        margin-top: 30px;
+     }
+
+     .line{
+        width: 40%;
+        background-color: rgb(73, 83, 83);
+        height: 2px;
+     }
+
+     .btn{
+        margin-top: 35px;
+     }
+}

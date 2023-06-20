@@ -1,0 +1,103 @@
+body {
+  padding: 20px;
+  margin: 0;
+  
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.img-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.img-div img {
+  max-width: 100%;
+  height: auto;
+}
+
+.label-style {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.alert {
+  margin-bottom: 10px;
+}
+
+.SignUp-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #5743D8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Sign-up {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.no-acc {
+  color: #555;
+}
+
+.signup-link {
+  color: #5743D8;
+  text-decoration: none;
+}
+
+.line {
+  margin: 20px auto;
+}
+
+.google-btn,
+.facebook-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.google-logo,
+.facebook-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container-fluid {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

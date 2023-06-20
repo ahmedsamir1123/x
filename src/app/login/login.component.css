@@ -1,0 +1,112 @@
+body {
+  background-image: linear-gradient(to right bottom, #EB96F2, #7393A7, #8193AA, #5743D8);
+  padding: 20px;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.img-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.img-div img {
+  max-width: 100%;
+  height: auto;
+}
+
+.label-style {
+  font-weight: bold;
+}
+
+.input-style {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input-style2 {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.alert {
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #5743D8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Sign-up {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.no-acc {
+  color: #555;
+}
+
+.signup-link {
+  color: #5743D8;
+  text-decoration: none;
+}
+
+.line {
+  margin: 20px auto;
+}
+
+.google-btn,
+.facebook-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-logo,
+.facebook-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container-fluid {
+    padding: 10px;
+  }
+
+  form {
+    padding: 10px;
+  }
+}

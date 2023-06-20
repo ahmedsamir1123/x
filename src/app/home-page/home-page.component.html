@@ -1,0 +1,101 @@
+<body style="  background-image:linear-gradient(to right bottom,#EB96F2,#7393A7,#8193AA,#5743D8); height: 110vh; ">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg ">
+
+      <img src="../../assets/imgs/logo/WM.png" class="logo " alt="">
+      <span class="logo-text">WriteMate</span>
+ 
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+        <li class="nav-item">
+         <button class="nav-btn" (click)="aboutus()">About US</button> 
+  
+        </li>
+        <li class="nav-item">
+          <button class="nav-btn" (click)="contactus()" > Contact US </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <section class="col-12" style="padding-bottom:50px ;">
+      <h2 class="title text-center">LET’S  START</h2>
+    </section>
+    <section class="col-12">
+      <p class="sub-title text-center">Your WriteMate is a writing system that helps
+        <br>
+        <span class="sub-title text-center">you find suitable words faster</span>
+        <br>
+        <span class="sub-title text-center">So..nothing can stop you</span>
+      </p>
+    </section>
+  </div>
+
+  <div>
+    <button class="buttonn "  (click)="signUp()"> Register</button>
+    <button class="buttonn" (click)="login()">Login</button>
+  </div>
+
+  <!-- About US -->
+  <section class="col-12 aboutUs" id="aboutUs">
+    <p class="aboutus-title text-center">We are a web reporting system provider on a mission to bring helpness to everyone who writes  reports.
+      <br>
+      <span class="aboutus-title text-center">We do it by constantly improving technology, providing professional support, and making write reports experience seamless by providing a next word prediction system .</span>
+      <br>
+    </p>
+  </section>
+  <section class="col-12 " id="contactUs">
+    <p class="aboutus-title text-center">Email: bolaadel28@gmail.com
+      <br>
+      <span class="aboutus-title text-center">Mobile: 01202213007</span>
+      <br>
+    </p>
+  </section>
+
+
+ <!-- ChatBot -->
+<div class="html">
+  <div class="body">
+    <div class="container">
+      <div class="chatbox" [class.chatbox--active]="state">
+        <div class="chatbox__support" id="hide-ChatBot">
+          <div class="chatbox__header">
+            <div class="chatbox__image--header">
+              <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image" />
+            </div>
+            <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">Chat support</h4>
+              <p class="chatbox__description--header">Hi. My name is mzmz. How can I help you?</p>
+            </div>
+          </div>
+          <div class="chatbox__messages">
+            <div *ngFor="let message of messages"
+              [ngClass]="{'messages_item messagesitem--operator': message.name === 'mzmz', 'messagesitem messages_item--visitor': message.name === 'User'}">
+              {{ message.message }}
+            </div>
+          </div>
+          <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message..." [(ngModel)]="newMessage"
+              (keyup.enter)="onSendButton()" />
+            <button class="chatbox_send--footer send_button" (click)="onSendButton()">Send</button>
+          </div>
+        </div>
+        <div class="chatbox__button">
+          <button (click)="toggleState()">
+            <img src="../../../assets/imgs/chatbox-icon.svg" alt="error" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>

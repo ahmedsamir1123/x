@@ -1,0 +1,129 @@
+.navbar {
+  background-color: #60888B;
+}
+
+/* To make nav buttons in the middle */
+.nav-ul {
+  margin-left: 480px;
+}
+
+/* nav buttons style */
+.nav-btn {
+  border-radius: 10px;
+  background-color: #ff7a00;
+  border: #ff7a00;
+  box-shadow: 5px 2px 1.5px rgba(151, 150, 150, 0.678);
+}
+
+/* nav buttons hover */
+.nav-btn:hover {
+  color: white;
+  text-shadow: 0 -1px 0 #354C8C;
+}
+
+/* drop down list of user account */
+.dropdown {
+  margin-left: 360px;
+}
+
+/* container with cotain the all of templates */
+.container {
+  background-color: rgba(163, 142, 142, 0.589);
+
+}
+
+#btn-icon {
+  border: none;
+  background-color: rgb(255, 255, 255, 0);
+  color: black;
+  font-size: 22px;
+  margin-left: 5px;
+  top: 17.1%;
+  right: 67.6%;
+  position: absolute;
+}
+
+.btn {
+  border-radius: 10px;
+  background-color: #ff7a00;
+  border: #ff7a00;
+  box-shadow: 5px 2px 1.5px rgba(151, 150, 150, 0.678);
+  margin: 5px;
+  margin-bottom: 2px;
+}
+
+
+/* tools toggle */
+#tool-toggle {
+  display: none;
+}
+
+
+.save-as-container {
+  display: none
+}
+
+/* font options */
+.options {
+  font-size: 20px;
+  color: rgb(4, 145, 145);
+  box-shadow: 0.5px 0.5px 0.5px rgb(8, 202, 202);
+  margin-left: 5px;
+}
+
+.options:hover {
+  font-size: 23px;
+}
+
+
+/* save as  */
+.save-as-container {
+  position: absolute;
+  top: 50px;
+  right: 50%;
+  background-color: #6C737E;
+  border: 2px solid;
+  text-align: center;
+  font-weight: bold;
+}
+
+.save-as-btn {
+  border-radius: 10px;
+  background-color: #B5CFD8;
+  border: #ff7a00;
+  box-shadow: 5px 2px 1.5px rgba(151, 150, 150, 0.678);
+}
+
+p {
+  font-family: Lato;
+}
+.fa-save{
+  position: relative;
+  left:4600%;
+  margin-top: -50px;
+}
+
+.select {
+  /* flex-wrap: wrap; */
+  width: 25;
+  position: fixed;
+  top: 14.8%;
+  left: 90.6%;
+  margin-top: 5px;
+}
+@media (max-width:800px) {
+  .select {
+    position: fixed;
+    top: 29%;
+    left: 75%;
+  
+}
+
+}
+@media (max-width:380px) {
+  .select {
+    position: fixed;
+    top: 33%;
+    left:30%;}
+
+}

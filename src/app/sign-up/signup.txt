@@ -1,0 +1,93 @@
+<body style="background-color:#60888B">
+  <div class="container-fluid">
+    <!-- container which contain data -->
+    <div class="container col-lg-6 col-md-12">
+      <div class="row">
+        <!--div for image  -->
+        <div class="col-12 img-div">
+
+          <img class="img-fluid col-md-8" src="../../assets/imgs//SignUp/signUp.jpg" alt="Error">
+        </div>
+      </div>
+
+      <!-- UserName Label & Input-->
+
+      <form method="POST" >
+
+      <div>
+        <label for="" class="label-style">User Name</label>
+        <input  type="text" placeholder="Enter Your Name"  maxlength="20" minlength="12" required class="input1-style"
+        name="username" [(ngModel)]="name">
+      </div>
+
+      <!-- div for alert if there is a problem in user name length -->
+      <!-- <div class="alert alert-danger col-lg-12 col-md-12" *ngIf="userName.errors?.['maxlength']">
+        UserName must be more than 3 characters & less than 20 character
+      </div> -->
+
+      <!-- Email Label & Input -->
+      <div>
+        <label for="" class="label-style">E-mail</label>
+        <input type="email" placeholder="Enter Your Email" maxlength="20" minlength="12" required class="input2-style"
+        name="email" [(ngModel)]="email">
+      </div>
+
+      <!-- div for alert if there is a problem in Email length -->
+
+      <!-- <div class="alert alert-danger col-lg-6"  *ngIf="Email.errors?.['maxlength']">
+        Email must be less than 20 character & more than 12 character</div> -->
+
+      <!-- password Label & Input -->
+      <div>
+        <label for="" class="label-style" >Password</label>
+        <input type="password" placeholder="Enter Your Password" class="input3-style" 
+          maxlength="20" minlength="8" required  name="password" [(ngModel)]="password">
+      </div>
+
+      <!-- div for alert if there is a problem in password length-->
+      <!-- <div class="alert alert-danger col-lg-6"  *ngIf="Password.errors?.['maxlength'] ">
+        Password must be more than 8 character & less than 20 character
+      </div> -->
+
+      <!-- Confirm Passowrd  Label & Input -->
+      <div>
+        <label for="" class="label-style">Comfirm Password </label>
+        <input type="password" placeholder="Enter Confirm Password" maxlength="20" minlength="12" required
+          class="input4-style"  >
+      </div>
+
+      <!-- div for alert if there is a problem in confirm password length-->
+      <!-- <div class="alert alert-danger col-lg-6"  *ngIf="ConfPassword.errors?.['maxlength']">
+        Password must be more than 8 character & less than 20 character </div> -->
+
+      <!-- Sign Up Button -->
+      <div class="col-12">
+        <button type="submit" name="submit" (click)="addUser()"  class="btn SignUp-btn btn-blocked" >Sign Up</button>
+
+      </div>
+      </form>
+
+      <br>
+
+      <!-- Sign up section -->
+      <p class="Sign-up">
+        <span class="no-acc"> Have an exist account ?</span>
+        <a routerLink="/login" class="signup-link">login</a>
+      </p>
+      <!-- line  -->
+      <hr class="line" width="30%" style="color:#60888b; text-align: center;">
+
+      <div class="row ">
+        <!-- google & Facebook buttons-->
+        <div class="col-6">
+          <button class="btn google-btn"><img src="../../assets/imgs/login/icons8-google-48.png" alt="Error"
+              class="google-logo"> Continue with Google</button>
+        </div>
+        <div class="col-6">
+          <button class="btn facebook-btn"><img src="../../assets/imgs/login/download.png" alt="Error"
+              class="facebook-logo"> Continue with Facebook</button>
+        </div>
+      </div>
+    </div>
+</div>
+</body>

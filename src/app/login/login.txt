@@ -1,0 +1,64 @@
+<body style="background-color:#60888B">
+  <div class="container-fluid">
+    <form action="" method="" ngModel>
+      <!-- container which contain data -->
+      <div class="container col-lg-6 col-md-12">
+        <div class="row">
+          <!--div for image  -->
+          <div class="col-12 img-div">
+
+            <img class="img-fluid col-md-8" src="../../assets/imgs/login/login.jpg" alt="Error">
+          </div>
+        </div>
+        <!-- Email Label & Input-->
+        <div>
+          <label for="" class="label-style">E-mail</label>
+          <input type="email" placeholder="Enter Your Email" maxlength="20" minlength="12" required class="input-style"
+            ngModel #Email="ngModel" name="email" id="email" [(ngModel)]="email">
+        </div>
+
+        <!-- div for alert but not work because of th form -->
+        <div class="alert alert-danger col-lg-6" style="margin-left:180px;" *ngIf="Email.errors?.['maxlength']">
+          Email must be less than 20 character & more than 12 character</div>
+
+        <!-- password Label & Input -->
+        <div>
+          <label for="" class="label-style">Password</label>
+          <input name="password" id="password" type="password" placeholder="Enter Your Password" class="input-style2" ngModel #Password="ngModel"
+            maxlength="20" minlength="8" required [(ngModel)]="password">
+        </div>
+
+        <!-- div for alert but not work because of th form -->
+        <div class="alert alert-danger col-lg-6" style="margin-left:180px;" *ngIf="Password.errors?.['maxlength']">
+          Password must be less than 20 character & more than 8 character
+        </div>
+
+        <!-- Login Button -->
+        <button (click)="log()" class="btn login-btn" >Login</button>
+        <br>
+        <!-- Sign up section -->
+        <p class="Sign-up">
+          <span class="no-acc"> No Account ?</span>
+          <a routerLink="/signup"class="signup-link">SignUp</a>
+        </p>
+        <!-- line  -->
+        <hr class="line" width="30%" style="color:#60888b; text-align: center;">
+
+        <div class="row ">
+          <!-- google & Facebook buttons-->
+          <div class="col-6">
+            <button class="btn google-btn"><img src="../../assets/imgs/login/icons8-google-48.png" alt="Error"
+                class="google-logo"> Continue with Google</button>
+          </div>
+          <div class="col-6">
+            <button class="btn facebook-btn"><img src="../../assets/imgs/login/download.png" alt="Error"
+                class="facebook-logo" > Continue with Facebook</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </form>
+  </div>
+</body>

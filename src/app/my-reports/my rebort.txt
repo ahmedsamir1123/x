@@ -1,0 +1,124 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/templates"><button type="button"
+              class="btn nav-btn">Home</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  aa" aria-current="page" routerLink="#"><button type="button" class="btn nav-btn">My
+              Reports</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  aa" onclick="document.getElementById('light').style.display='block';
+          document.getElementById('fade').style.display='block'" aria-current="page" routerLink="#"><button type="button"
+              class="btn nav-btn">FeedBack</button></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fas fa-user-circle"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="#">Action</a></li>
+            <li><a class="dropdown-item" routerLink="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" >Something else here</a></li>
+            <li><button (click)="logout()">log out</button></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<!-- end of navbar -->
+
+<!-- Reports Section -->
+
+<div class="container">
+
+  <div class="row" *ngFor="let x of allData">
+
+    <!-- <img class="col-2 img" [src]="x.imgUrl" alt="error"> -->
+    <h4 class="col-2 report-name">{{x.name}} </h4>
+<h6 class="col-5"> {{x.date}}</h6>
+    <a class="icons col-1" title="edit" [routerLink]="['/editReport',x.rid]">
+      <i class=" far fa-edit"></i> 
+    </a>
+    <button (click)="remove(x.rid)" class="icons col-1" title="delete"><i class=" fas fa-trash-alt"></i></button>
+  </div>
+</div>
+
+
+<!-- feedback  -->
+ 
+<form method="post" autocomplete="off">
+
+  <div id="light" class="white_content container col-4">
+    <div class="row">
+        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" class="col-1 exit"><i class="fas fa-times-circle"></i></a>
+    </div>
+
+    <h2 class="page-title">FeedBack Form</h2>
+    <label for="" class="label" > First Name </label>
+    <input class="inputs col-9" placeholder="Enter First Name" type="text" [(ngModel)]="fname" name="fname">
+    <label for="" class="label"> Last Name </label>
+    <input class="inputs col-9" placeholder="Enter Last Name" type="text" [(ngModel)]="lname" name="lname">
+    <label for="" class="label"> Email</label>
+    <input class="inputs col-9" placeholder="Enter Your Email" type="text" [(ngModel)]="email" name="email">
+    <label for="" class="label"> Message </label>
+    <textarea class="inputs comment-input col-9" type="text" placeholder="Your Comment" [(ngModel)]="message" name="message"></textarea>
+
+    <button type="submit" class="btn btn-primary" (click)="postdata()">Submit</button>
+  
+      
+    </div>
+  <div id="fade" class="black_overlay"></div>
+  
+<!-- chatbot -->
+  <div class="htm">
+    <div class="bod">
+    <div class="container">
+      <div class="chatbox" [class.chatbox--active]="state">
+        <div class="chatbox__support"  id="hide-ChatBot">  
+              <div class="chatbox__header">
+            <div class="chatbox__image--header">
+              <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image" />
+            </div>
+            <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">Chat support</h4>
+              <p class="chatbox__description--header">Hi. My name is mzmz. How can I help you?</p>
+            </div>
+          </div>
+          <div class="chatbox__messages">
+            <div *ngFor="let message of messages" [ngClass]="{'messages__item messages__item--operator': message.name === 'mzmz', 'messages__item messages__item--visitor': message.name === 'User'}">
+              {{ message.message }}
+            </div>
+          </div>
+          <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message..." [(ngModel)]="newMessage" (keyup.enter)="onSendButton()" />
+            <button class="chatbox__send--footer send__button" (click)="onSendButton()">Send</button>
+          </div>
+        </div>
+        <div class="chatbox__button">
+          <button (click)="toggleState()">
+            <img src="../../../assets/imgs/chatbox-icon.svg" alt="error"/>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    </div>
+</form>

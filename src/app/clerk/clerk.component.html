@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-2 leftConrner">
+    <img src="../../assets/imgs/admin/WM 01.png" alt="" class="img-fluid">
+    <h3 class="text-center"> WriteMate</h3>
+  </div>
+
+  <div class="col-10 ">
+    <nav class="navbar navbar-expand-lg nav row ">
+
+      
+      <div class="container-fluid ">
+        
+    
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user-cog"></i>
+                <span class="navSpan"> {{name}}</span>
+                
+              </a>
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" routerLink="/setting">Account Setting</a></li>
+                <li><button class="btn nav-btn" style="margin-left:20%;" (click)="logout()">logout</button></li>
+              </ul>
+            </li>
+          </ul> 
+        </div>
+      </div>
+    </nav>
+    
+   
+ 
+
+   
+
+    <div class="container FeedBack-sec">
+      <div class="row">
+        <div class="card col-4 col-md-12" style="width: 18rem; background-color: rgba(163, 142, 142, 0.589);"
+          *ngFor="let x of allData">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{x.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary text-center">{{x.email}}</h6>
+            <div style="background-color: black; height: 3px;"></div>
+            <p class="card-text">{{x.content}}</p>
+            <p class="card-text">{{x.date}}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

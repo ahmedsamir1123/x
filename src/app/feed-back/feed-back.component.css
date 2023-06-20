@@ -1,0 +1,117 @@
+/* background color of navbar */
+.navbar {
+    background-color: #60888B;
+  }
+  
+  /* To make nav buttons in the middle */
+  .nav-ul {
+      margin-left: 480px;
+    }
+  
+  /* nav buttons style */
+  .nav-btn {
+      border-radius: 10px;
+      background-color: #ff7a00;
+      border: #ff7a00;
+      box-shadow: 5px 2px 1.5px rgba(151, 150, 150, 0.678);
+    }
+  
+    /* nav buttons hover */
+  .nav-btn:hover {
+      color: white;
+      text-shadow: 0 -1px 0 #354C8C;
+    }
+  /* drop down list of user account */
+    .dropdown {
+      margin-left: 360px;
+    }
+
+    /* account setting style */
+.fa-user-circle {
+    color: black;
+    font-size: 40px;
+  
+  }
+
+  @media(max-width:750px) {
+    .nav-ul {
+      margin: 0px;
+      padding: 0px
+    }
+  
+    .fa-user-circle {
+      font-size: 40px;
+  
+    }
+  
+    .dropdown {
+      margin-left: 0px;
+    }
+}
+
+.container{
+    background-color: #60888B;
+margin-top: 20px;
+height: 100vh;}
+
+.page-title{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.label{
+    margin-left: 50px;
+    margin-top: 20px;
+    
+}
+.inputs{
+    margin-left: 45px;
+    border-radius: 20px;
+}
+.comment-input{
+    height: 120px;
+    border-radius: 10PX;
+}
+
+/* text section */
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .80;
+  }
+  .white_content {
+    display: none;
+    position: absolute;
+    top: -2%;
+    left: 35%;
+    width: 30%;
+    height: 97%;
+    padding: 16px;
+    border: 3px solid orange;
+    background-color: #60888B;
+    z-index: 1002;
+  }
+.exit{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: orange;
+}
+
+.feedback-btn{
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ff7a00;
+  border: #ff7a00;
+  box-shadow: 5px 2px 1.5px rgba(151, 150, 150, 0.678);
+  margin-left: 40%;
+  margin-top:30px
+}

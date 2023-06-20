@@ -1,0 +1,60 @@
+<body style="background-color:#60888B; height:100vh; overflow: hidden;"  >
+  <div class="container">
+    <div class="row">
+  
+      <section class="col-4">
+        <p class="title-of-page">Report System  </p>
+        <p class="title-of-page">with Next Word  </p>
+        <p class="title-of-page span-word">prediction</p>
+        <div class="line"></div>
+        <div class="buttons row ">
+          <button (click)="login()" class="buttonn log-btn btn btn-primary col-6">Login</button> 
+           <button (click)="signUp()" class="buttonn btn btn-primary col-6">Sign Up</button> 
+        </div>
+      </section>
+      
+  
+        <img class="col-8" src="../../assets/imgs/Home Page/s2.jpeg" width="560px" height="300px" style="float:right" >
+        
+        
+      
+  
+  
+  
+    </div>
+  </div>
+<div class="html">
+<div class="body">
+<div class="container">
+  <div class="chatbox" [class.chatbox--active]="state">
+    <div class="chatbox__support"  id="hide-ChatBot">  
+          <div class="chatbox__header">
+        <div class="chatbox__image--header">
+          <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image" />
+        </div>
+        <div class="chatbox__content--header">
+          <h4 class="chatbox__heading--header">Chat support</h4>
+          <p class="chatbox__description--header">Hi. My name is mzmz. How can I help you?</p>
+        </div>
+      </div>
+      <div class="chatbox__messages">
+        <div *ngFor="let message of messages" [ngClass]="{'messages__item messages__item--operator': message.name === 'mzmz', 'messages__item messages__item--visitor': message.name === 'User'}">
+          {{ message.message }}
+        </div>
+      </div>
+      <div class="chatbox__footer">
+        <input type="text" placeholder="Write a message..." [(ngModel)]="newMessage" (keyup.enter)="onSendButton()" />
+        <button class="chatbox__send--footer send__button" (click)="onSendButton()">Send</button>
+      </div>
+    </div>
+    <div class="chatbox__button">
+      <button (click)="toggleState()">
+        <img src="../../../assets/imgs/chatbox-icon.svg" alt="error"/>
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</body>

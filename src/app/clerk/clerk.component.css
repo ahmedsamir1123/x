@@ -1,0 +1,98 @@
+
+
+
+.col-10 {
+    flex:  83.33333%;
+    max-width: 83.33333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.leftConrner {
+    height:100vh;
+    background-color: #6C737E;
+}
+
+.img-fluid {
+    height: 170px;
+    margin-left: 55px;
+}
+
+.nav {
+    background-color: #A8AEB5;
+    height: 50px;
+}
+.navSpan{
+    font-size: 25px;
+    font-weight: bold
+}
+
+.user-setting {
+    position: relative;
+    right: -78%;
+    font-weight: bold;
+}
+
+
+
+.fa-user-cog {
+    font-size: 25px;
+    font-weight: bold;
+   
+}
+.dropdown {
+    position: relative;  
+    top: 0px;
+    left:800px;
+  }
+
+.FeedBack-sec {
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 30px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+   
+    .col-10 {
+        flex:  100%;
+        width: 80%;
+    
+    }
+
+    .img-fluid {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60px;
+        height: 80px;
+    }
+
+   
+    .user-setting {
+        margin-top: 10px;
+        left: 50px;
+    }
+    .text-center{
+        font-size: 11px;
+        
+    }
+.dropdown {
+    margin-left: 20%;
+  }
+
+
+    .FeedBack-sec {
+        margin-top: 20px;
+    }
+
+    .card {
+        margin-left: 15px;
+        margin-right: auto;
+        width: 80%;
+        margin-top: 20px;
+    }
+}
